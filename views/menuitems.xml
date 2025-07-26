@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="product_dashboard_menu"
+        name="Product Dashboard"
+        parent="sale.sale_order_menu"
+        sequence="99"/>
+
+    <record id="action_sales_dashboard" model="ir.actions.client">
+        <field name="name">Product KPIs Dashboard</field>
+        <field name="tag">product_kpi_dashboard.product_dashboard_action</field>
+        <field name="path">product-kpi-dashboard</field>
+    </record>
+
+    <menuitem
+        id="product_kpi_dashboard_menu"
+        name="Product KPIs"
+        action="action_sales_dashboard"
+        parent="product_dashboard_menu"
+        sequence="1" />
+
+</odoo>
